@@ -1,6 +1,6 @@
 let currentSlide = 0;
 
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 3000); // Automatically go to the next slide every 3 seconds
 
 function nextSlide() {
     changeSlide(1); // Move to the next slide
@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSliderPosition(); // Set initial position of the slider
 
     // Add event listeners for buttons
-    document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+    document.querySelector('.prev').addEventListener('click', () => {
+        changeSlide(-1);
+    });
+    document.querySelector('.next').addEventListener('click', () => {
+        changeSlide(1);
+    });
 });
